@@ -1,9 +1,9 @@
 ! ===== Segurança e senhas =====
 enable
-    clock set 20:20:00 15 october 2025
+    clock set 20:20:00 17 october 2025
     configure terminal
 ! ===== Configuração básica do sistema =====
-        hostname rt-01
+        hostname rt-02
         service password-encryption
         security passwords min-length 8
         login block-for 120 attempts 2 within 60
@@ -46,7 +46,7 @@ enable
 ! ===== Configuração de interfaces =====
         interface GigabitEthernet 0/0
             description Interface de Gateway da LAN
-            ip address 192.168.1.254 255.255.255.0
+            ip address 172.16.100.254 255.255.255.0
             no shutdown
             end
 ! ===== Salvando configuração =====
